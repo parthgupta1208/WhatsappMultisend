@@ -21,12 +21,12 @@ driver.get('https://web.whatsapp.com/')
 input('Scan the QR code and press enter to continue...')
 
 for row in sheet.iter_rows(min_row=2, values_only=True):
-    
+
     name, phone = row
     search_box = driver.find_element_by_xpath('//div[@contenteditable="true"][@data-tab="3"]')
     search_box.clear()
     search_box.send_keys(f'{phone}')
-    driver.implicitly_wait(5) # Wait for the contact to load
+    driver.implicitly_wait(5)
     time.sleep(1)
     try:
         driver.find_element_by_xpath(f'//span[@title="{name}"]')
