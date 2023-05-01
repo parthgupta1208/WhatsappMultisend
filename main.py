@@ -10,10 +10,11 @@ import pyautogui
 workbook = openpyxl.load_workbook('contact.xlsx')
 sheet = workbook['Sheet1']
 
-message = "II PUC regular classes with CET and NEET coaching will start from April 1st week.. Faculty from reputed Institutions will be handling classes.. For more information contact Insight Academy Santhekatte -9880782393"
-image_path="C:\Everything\hehe.jpg"
-image_path_2="C:\Everything\hehe2.jpg"
-image_path_3="C:\Everything\hehe3.jpg"
+# Get the WhatsApp message to send
+message = "Text Message Goes Here" #you can modify this text message
+image_path="image_path.jpg"
+image_path_2="image_path2.jpg"
+image_path_3="image_path3.jpg" # you can set any images you want to send here
 
 driver = webdriver.Chrome('C:/Everything/chromedriver.exe')
 driver.get('https://web.whatsapp.com/')
